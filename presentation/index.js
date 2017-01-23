@@ -40,7 +40,6 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
 
 	lambda: require("../assets/lambda.jpg"),
-	npmSearchResult: require("../assets/npmSearchResult.png"),
 	gitExample: require("../assets/gitExample.png"),
 
 };
