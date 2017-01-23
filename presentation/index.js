@@ -3,23 +3,23 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  Appear,
-  BlockQuote,
-  Cite,
-  CodePane,
-  Deck,
-  Fill,
-  Heading,
-  Image,
-  Layout,
-  Link,
-  ListItem,
-  List,
-  Markdown,
-  Quote,
-  Slide,
-  Spectacle,
-  Text
+	Appear,
+	BlockQuote,
+	Cite,
+	CodePane,
+	Deck,
+	Fill,
+	Heading,
+	Image,
+	Layout,
+	Link,
+	ListItem,
+	List,
+	Markdown,
+	Quote,
+	Slide,
+	Spectacle,
+	Text
 } from "spectacle";
 import CodeSlide from 'spectacle-code-slide';
 
@@ -51,25 +51,72 @@ const theme = createTheme({
 });
 
 export default class Presentation extends React.Component {
-  render() {
-    return (
-      <Spectacle theme={theme}>
-        <Deck transition={["zoom", "slide"]} transitionDuration={500}>
+	render() {
+		return (
+		<Spectacle theme={theme}>
+			<Deck transition={["zoom", "slide"]} transitionDuration={500}>
 				<Slide transition={["zoom"]} bgColor="primary">
-            <Heading size={1} fit caps>
-              AWS Lambda by different framworks
-            </Heading>
-						<Text textColor="black"> Donn Zhao</Text>
-						<Text caps bold textColor="white"> backend team @ Channel 7</Text>
+					<Heading size={1} fit caps>
+						AWS Lambda by Framework Comparison
+					</Heading>
+					<Text textColor="black">Donn Zhao &amp; Brendan Graetz</Text>
+					<Text caps bold textColor="white">Backend Team @ Channel 7</Text>
+				</Slide>
+				<Slide>
+					<Heading>Purpose</Heading>
+					<List>
+						<ListItem>R &amp; D</ListItem>
+						<ListItem>
+							<Text>"noBackend"</Text>
+							<List>
+								<ListItem>Less devops</ListItem>
+								<ListItem>Deploy individual functions</ListItem>
+								<ListItem>Pay per function call</ListItem>
+							</List>
+						</ListItem>
+						<ListItem>
+							<Text>Use case</Text>
+							<List>
+								<ListItem>infrequently called functions, e.g.</ListItem>
+								<ListItem>VOD uploads</ListItem>
+								<ListItem>sending emails</ListItem>
+								<ListItem>generate PDF invoice</ListItem>
+							</List>
+						</ListItem>
+					</List>
+				</Slide>
+				<Slide>
+					<Heading>"Cowboy" devops</Heading>
+					<Text>Classic edition:</Text>
+					<List>
+						<ListItem>ssh into production</ListItem>
+						<ListItem>edit code</ListItem>
+					</List>
+				</Slide>
+				<Slide>
+					<Heading>"Cowboy" devops</Heading>
+					<Text>AWS&lambda; edition:</Text>
+					<List>
+						<ListItem>log into AWS site</ListItem>
+						<ListItem>edit code in website</ListItem>
+					</List>
+				</Slide>
+				<Slide>
+					<Heading>Pitfalls</Heading>
+					<List>
+						<ListItem>Version control?</ListItem>
+						<ListItem>Rollback?</ListItem>
+						<ListItem>Manage inter-function dependencies?</ListItem>
+						<ListItem>CI/ CD?</ListItem>
+					</List>
+				</Slide>
 
-          </Slide>
 					<Slide transition={["zoom"]} bgColor="primary">
-							<Link href="https://github.com/Donnzh/lambda-example-by-different-frameworks">
-								<Text caps textColor="white">example on Github</Text>
-							</Link>
-							<Image src={images.gitExample.replace("/", "")} margin="0px auto 40px" />
-
-						</Slide>
+						<Link href="https://github.com/Donnzh/lambda-example-by-different-frameworks">
+							<Text caps textColor="white">example on Github</Text>
+						</Link>
+						<Image src={images.gitExample.replace("/", "")} margin="0px auto 40px" />
+					</Slide>
           <Slide transition={["slide"]} bgColor="black" textColor="primary" notes="electronic receipts email, keep copy for finance department">
             <Image src={images.lambda.replace("/", "")} margin="0px auto 40px" height="293px"/>
 						<List>
