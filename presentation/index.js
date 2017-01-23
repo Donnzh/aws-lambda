@@ -57,7 +57,7 @@ export default class Presentation extends React.Component {
 			<Deck transition={["zoom", "slide"]} transitionDuration={500}>
 				<Slide transition={["zoom"]} bgColor="primary">
 					<Heading size={1} fit caps>
-						AWS Lambda by Framework Comparison
+						AWS&lambda; Framework Comparison
 					</Heading>
 					<Text textColor="black">Donn Zhao &amp; Brendan Graetz</Text>
 					<Text caps bold textColor="white">Backend Team @ Channel 7</Text>
@@ -80,7 +80,7 @@ export default class Presentation extends React.Component {
 								<ListItem>infrequently called functions, e.g.</ListItem>
 								<ListItem>VOD uploads</ListItem>
 								<ListItem>sending emails</ListItem>
-								<ListItem>generate PDF invoice</ListItem>
+								<ListItem>generate PDF invoices</ListItem>
 							</List>
 						</ListItem>
 					</List>
@@ -110,6 +110,45 @@ export default class Presentation extends React.Component {
 						<ListItem>CI/ CD?</ListItem>
 					</List>
 				</Slide>
+				<Slide>
+					<Heading>Tools</Heading>
+					<List>
+						<ListItem>Apex/ Serverless/ Claudia</ListItem>
+						<ListItem>&#10003; git</ListItem>
+						<ListItem>&#10003; manage inter-&lambda; dependencies</ListItem>
+						<ListItem>&#10003; CI/ CD</ListItem>
+						<ListItem>&#10060; testing</ListItem>
+					</List>
+				</Slide>
+				<Slide>
+					<Heading>Best practices</Heading>
+					<List>
+						<ListItem>&lambda; functions</ListItem>
+						<ListItem>"regular" servers</ListItem>
+					</List>
+					<Text>Both should be subject to the same software engineering <strong>processes &amp; standards</strong></Text>
+				</Slide>
+				<Slide>
+					<Heading>"Hello &lambda;"</Heading>
+					<List>
+						<ListItem>More than just "Hello World"</ListItem>
+						<ListItem>get & set values in <strong>postgres</strong></ListItem>
+						<ListItem>get & set values in <strong>redis</strong></ListItem>
+						<ListItem>stateless functions <strong>&#10133;</strong> persistence <strong>&#61;</strong> API server</ListItem>
+					</List>
+				</Slide>
+				<Slide>
+					<Heading>Compare and contrast</Heading>
+					<List>
+						<ListItem>Frameworks: Apex. Serverless. Claudia.</ListItem>
+						<ListItem>Development process</ListItem>
+						<ListItem>Deployment process</ListItem>
+						<ListItem>Configurability</ListItem>
+						<ListItem>Coherence</ListItem>
+					</List>
+				</Slide>
+
+
 
 					<Slide transition={["zoom"]} bgColor="primary">
 						<Link href="https://github.com/Donnzh/lambda-example-by-different-frameworks">
