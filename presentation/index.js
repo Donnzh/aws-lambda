@@ -158,8 +158,8 @@ export default class Presentation extends React.Component {
 					<Text margin="0px auto 20px" bold textColor="white">Apex</Text>
 					<List>
 					<Appear><ListItem> lightweight</ListItem></Appear>
-					<Appear><ListItem> Command-line invokation </ListItem></Appear>
-					<Appear><ListItem textSize= "40"> VPC, Function rollback </ListItem></Appear>
+					<Appear><ListItem> Command-line invokation, rollback </ListItem></Appear>
+					<Appear><ListItem> Function config file, e.g. VPC, Role, Memory useage</ListItem></Appear>
 						<Appear><ListItem> node.js,golang,Python,Java</ListItem></Appear>
 
 					</List>
@@ -167,21 +167,18 @@ export default class Presentation extends React.Component {
 
 					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
 					<Text margin="0px auto 20px" bold textColor="white">Apex</Text>
-					<List>
-						<Appear><ListItem textColor="primary" ><Markdown textSize= "60">
-						{`
-					project.json
-							functions
-							├── bar
-							│   ├── function.json
-							│   └── index.js
-							└── foo
-								├── function.json
-								└── index.js
-						`}
-						</Markdown></ListItem></Appear>
-
-					</List>
+					<Markdown>
+{`
+	project.json
+	functions
+	├── bar
+	│   ├── function.json
+	│   └── index.js
+	└── foo
+		├── function.json
+		└── index.js
+`}
+					</Markdown>
 					</Slide>
 					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
 					<Text margin="0px auto 20px" bold textColor="white">Apex</Text>
@@ -206,23 +203,20 @@ export default class Presentation extends React.Component {
 					</Slide>
 					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
 					<Text margin="0px auto 20px" bold textColor="white">Claudia</Text>
-					<List>
-						<Appear><ListItem textColor="primary" ><Markdown textSize= "65">
-						{`
-							functions
-							├── bar
-							│   ├── node_modules
-							│   ├── claudia.json
-							│   └── lambda.js
-							│   └── package.json
-							│
-							└── foo
-								├── claudia.json
-								└── lambda.js
-						`}
-						</Markdown></ListItem></Appear>
-
-					</List>
+					<Markdown >
+{`
+	functions
+	├── bar
+	│   ├── node_modules
+	│   ├── claudia.json
+	│   └── lambda.js
+	│   └── package.json
+	│
+	└── foo
+		├── claudia.json
+		└── lambda.js
+`}
+						</Markdown>
 					</Slide>
 					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
 					<Text margin="0px auto 20px" bold textColor="white">Claudia</Text>
@@ -250,21 +244,16 @@ export default class Presentation extends React.Component {
 
 					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
 					<Text margin="0px auto 20px" bold textColor="white">Serverless</Text>
-					<List>
-
-						<Appear><ListItem textColor="primary" ><Markdown textSize= "85">
-						{`
-					my-server
-									├── node_modules
-									├── bar.js
-									├── foo.js
-									├── package.json
-									├── serverless.yml
-
-						`}
-						</Markdown></ListItem></Appear>
-
-					</List>
+					<Markdown>
+{`
+	my-server
+		├── node_modules
+		├── bar.js
+		├── foo.js
+		├── package.json
+		├── serverless.yml
+`}
+					</Markdown>
 					</Slide>
 
 					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
@@ -280,21 +269,21 @@ export default class Presentation extends React.Component {
 					</Slide>
 
 					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
-					<Text margin="0px auto 20px" bold textColor="white">Serverless</Text>
-					<Appear><Markdown textSize= "85">
-					{`
+					<Text margin="0px auto 20px" bold textColor="white">Lambda Frameworks</Text>
+					<Markdown>
+{`
 Feature | Apex | Serverless      | Cloudia
 ------- | ---------------- | ---------- | ---------:
+Size |    lightweight     |        | lightweight
+Support language|  go, node.js, java      |  node.js, python, java | node.js
+Plugin libraries |  yes    |    yes | yes
 Couldwatch log suport  | no | yes | no
-Vpc setting in config file  | yes        | yes       | no
+Vpc setting in config file  | yes      | yes       | no
 Functions share node modules   | no | yes     | no
 Dynamic Reference config file | no        | yes       | no
-Size |    lightweight     |        | lightweight
-Plugin libraries |  yes    |    yes | yes
-Support language|  go, node.js,     |  node.js, python | node.js
 automates configuration tasks |  no    |    no | yes
-					`}
-					</Markdown></Appear>
+`}
+					</Markdown>
 
 					</Slide>
 
