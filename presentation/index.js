@@ -148,45 +148,27 @@ export default class Presentation extends React.Component {
 					</List>
 				</Slide>
 
-
-
 					<Slide transition={["zoom"]} bgColor="primary">
 						<Link href="https://github.com/Donnzh/lambda-example-by-different-frameworks">
 							<Text caps textColor="white">example on Github</Text>
 						</Link>
 						<Image src={images.gitExample.replace("/", "")} margin="0px auto 40px" />
 					</Slide>
-          <Slide transition={["slide"]} bgColor="black" textColor="primary" notes="electronic receipts email, keep copy for finance department">
-            <Image src={images.lambda.replace("/", "")} margin="0px auto 40px" height="293px"/>
-						<List>
-							<Appear><ListItem>'Serverless' : without provisioning or managing servers</ListItem></Appear>
-							<Appear><ListItem>Deploy individual functions </ListItem></Appear>
-							<Appear><ListItem>Code in response to events</ListItem></Appear>
-							<Appear><ListItem>Pay only for the compute time:  no charge the code not running</ListItem></Appear>
-						</List>
-          </Slide>
-
-					<Slide transition={["slide"]} bgColor="black" textColor="primary" notes="electronic receipts email, keep copy for finance department">
-						<Image src={images.lambda.replace("/", "")} margin="0px auto 40px" height="293px"/>
-						<List>
-							<Appear><ListItem>USE CASE:</ListItem></Appear>
-							<Appear><ListItem>infrequantly called functions</ListItem></Appear>
-							<Appear><ListItem>upload files</ListItem></Appear>
-							<Appear><ListItem>edm server</ListItem></Appear>
-						</List>
-					</Slide>
-
-
 					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
 					<Text margin="0px auto 20px" bold textColor="white">Apex</Text>
 					<List>
 					<Appear><ListItem> lightweight</ListItem></Appear>
 					<Appear><ListItem> Command-line invokation </ListItem></Appear>
 					<Appear><ListItem textSize= "40"> VPC, Function rollback </ListItem></Appear>
-
-						<Appear><ListItem> Hook support</ListItem></Appear>
 						<Appear><ListItem> node.js,golang,Python,Java</ListItem></Appear>
-						<Appear><ListItem textColor="primary" ><Markdown textSize= "35">
+
+					</List>
+					</Slide>
+
+					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
+					<Text margin="0px auto 20px" bold textColor="white">Apex</Text>
+					<List>
+						<Appear><ListItem textColor="primary" ><Markdown textSize= "60">
 						{`
 					project.json
 							functions
@@ -194,10 +176,20 @@ export default class Presentation extends React.Component {
 							│   ├── function.json
 							│   └── index.js
 							└── foo
-							    ├── function.json
-							    └── index.js
+								├── function.json
+								└── index.js
 						`}
 						</Markdown></ListItem></Appear>
+
+					</List>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
+					<Text margin="0px auto 20px" bold textColor="white">Apex</Text>
+					<List>
+					<Appear><ListItem> Command-line crediential setting </ListItem></Appear>
+					<Appear><ListItem> moudles in each function</ListItem></Appear>
+					<Appear><ListItem> function.json as config in each function </ListItem></Appear>
+						<Appear><ListItem> no cloudwatch in console log </ListItem></Appear>
 
 					</List>
 					</Slide>
@@ -208,9 +200,14 @@ export default class Presentation extends React.Component {
 					<Appear><ListItem> lightweight</ListItem></Appear>
 					<Appear><ListItem>  a deployment utility, instead of a framework </ListItem></Appear>
 					<Appear><ListItem textSize= "40"> Command-line invokation </ListItem></Appear>
+					<Appear><ListItem> node.js </ListItem></Appear>
 
-						<Appear><ListItem> node.js </ListItem></Appear>
-						<Appear><ListItem textColor="primary" ><Markdown textSize= "35">
+					</List>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
+					<Text margin="0px auto 20px" bold textColor="white">Claudia</Text>
+					<List>
+						<Appear><ListItem textColor="primary" ><Markdown textSize= "65">
 						{`
 							functions
 							├── bar
@@ -220,10 +217,21 @@ export default class Presentation extends React.Component {
 							│   └── package.json
 							│
 							└── foo
-									├── claudia.json
-									└── lambda.js
+								├── claudia.json
+								└── lambda.js
 						`}
 						</Markdown></ListItem></Appear>
+
+					</List>
+					</Slide>
+					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
+					<Text margin="0px auto 20px" bold textColor="white">Claudia</Text>
+					<List>
+					<Appear><ListItem> deployment utility tool, less import on project structure </ListItem></Appear>
+					<Appear><ListItem> moudle files in each functions</ListItem></Appear>
+					<Appear><ListItem> generate a role for each function when deploy </ListItem></Appear>
+					<Appear><ListItem> heavily depends on Command-line config </ListItem></Appear>
+					<Appear><ListItem> no cloudwatch in console log </ListItem></Appear>
 
 					</List>
 					</Slide>
@@ -231,40 +239,65 @@ export default class Presentation extends React.Component {
 					<Text margin="0px auto 20px" bold textColor="white">Serverless</Text>
 					<List>
 					<Appear><ListItem> lambda framework</ListItem></Appear>
-					<Appear><ListItem> also upload server to S3</ListItem></Appear>
-					<Appear><ListItem> cloudwatch in console </ListItem></Appear>
+					<Appear><ListItem> upload server to S3</ListItem></Appear>
 						<Appear><ListItem> Built-in support for multiple stages.</ListItem></Appear>
 						<Appear><ListItem> Extensible via Plugins</ListItem></Appear>
-						<Appear><ListItem textSize= "40"> Functions can be grouped, shared packages </ListItem></Appear>
 						<Appear><ListItem> Supports Node.js, Python, Java & Scala. </ListItem></Appear>
 
-						<Appear><ListItem textColor="primary" ><Markdown textSize= "35">
+
+					</List>
+					</Slide>
+
+					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
+					<Text margin="0px auto 20px" bold textColor="white">Serverless</Text>
+					<List>
+
+						<Appear><ListItem textColor="primary" ><Markdown textSize= "85">
 						{`
 					my-server
-							├── node_modules
-							├── bar.js
-							├── foo.js
-							├── package.json
-							├── serverless.yml
+									├── node_modules
+									├── bar.js
+									├── foo.js
+									├── package.json
+									├── serverless.yml
+
 						`}
 						</Markdown></ListItem></Appear>
 
 					</List>
 					</Slide>
 
-					<CodeSlide
-										transition={['fade']}
-										lang="js"
-										textSize="20px"
-										code={require("raw!../assets/codeExample")}
-										ranges={[
-											{ loc: [0, 4], title: "pdfmake", note: "call the modules" },
-											{ loc: [4, 10], title: "pdfmake", note: "Defined the pdf context" },
-											{ loc: [11, 12] },
+					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
+					<Text margin="0px auto 20px" bold textColor="white">Serverless</Text>
+					<List>
+					<Appear><ListItem> group functions </ListItem></Appear>
+					<Appear><ListItem> yml config file for all </ListItem></Appear>
+						<Appear><ListItem> functions share modules</ListItem></Appear>
+						<Appear><ListItem> more flags in console commands </ListItem></Appear>
+						<Appear><ListItem> cloudwatch in console log </ListItem></Appear>
 
-											{ loc: [12, 13], note: "It can output to write stream, no necessary to disk" },
-											{ loc: [13, 14], note: "finish the output" }]}
-					/>
+					</List>
+					</Slide>
+
+					<Slide transition={["slide"]} bgColor="primary" textColor="white" notes="You can even put notes on your slide. How awesome is that?">
+					<Text margin="0px auto 20px" bold textColor="white">Serverless</Text>
+					<Appear><Markdown textSize= "85">
+					{`
+Feature | Apex | Serverless      | Cloudia
+------- | ---------------- | ---------- | ---------:
+Couldwatch log suport  | no | yes | no
+Vpc setting in config file  | yes        | yes       | no
+Functions share node modules   | no | yes     | no
+Dynamic Reference config file | no        | yes       | no
+Size |    lightweight     |        | lightweight
+Plugin libraries |  yes    |    yes | yes
+Support language|  go, node.js,     |  node.js, python | node.js
+automates configuration tasks |  no    |    no | yes
+					`}
+					</Markdown></Appear>
+
+					</Slide>
+
           <Slide transition={["slide"]} bgColor="black">
 
             <BlockQuote>
