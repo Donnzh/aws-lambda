@@ -159,8 +159,8 @@ export default class Presentation extends React.Component {
 					<List>
 						<Appear><ListItem> Lightweight</ListItem></Appear>
 						<Appear><ListItem> Command-line invocation </ListItem></Appear>
-						<Appear><ListItem> Rollback </ListItem></Appear>
-						<Appear><ListItem> Function config file: VPC, Role, Memory usage</ListItem></Appear>
+						<Appear><ListItem> &#10003; Rollback </ListItem></Appear>
+						<Appear><ListItem> &#10003; Function config file: VPC, Role, Memory usage</ListItem></Appear>
 						<Appear><ListItem> Supports Node.js, Golang, Python, Java</ListItem></Appear>
 					</List>
 				</Slide>
@@ -171,22 +171,24 @@ export default class Presentation extends React.Component {
 {`
 	project.json
 	functions
-	├── bar
-	│   ├── function.json
-	│   └── index.js
-	└── foo
-		├── function.json
-		└── index.js
+		├── bar
+		│	├── node_modules
+		│	├── function.json
+		│	└── index.js
+		└── foo
+			├── node_modules
+			├── function.json
+			└── index.js
 `}
 					</Markdown>
 				</Slide>
 				<Slide transition={["slide"]} bgColor="primary" textColor="white">
 					<Text margin="0px auto 20px" bold textColor="white">Apex</Text>
 					<List>
-						<Appear><ListItem> Command-line credential setting </ListItem></Appear>
-						<Appear><ListItem> node_modules in each function</ListItem></Appear>
-						<Appear><ListItem> function.json as config in each function </ListItem></Appear>
-						<Appear><ListItem> No CloudWatch log in console </ListItem></Appear>
+						<Appear><ListItem> &#10003; Command-line credential setting </ListItem></Appear>
+						<Appear><ListItem> &#10060; node_modules in each function</ListItem></Appear>
+						<Appear><ListItem> &#10003; function.json as config in each function </ListItem></Appear>
+						<Appear><ListItem> &#10060; No CloudWatch log in console </ListItem></Appear>
 					</List>
 				</Slide>
 
@@ -195,7 +197,7 @@ export default class Presentation extends React.Component {
 					<List>
 						<Appear><ListItem> Lightweight </ListItem></Appear>
 						<Appear><ListItem> Deployment utility, not a framework </ListItem></Appear>
-						<Appear><ListItem textSize= "40"> Command-line invocation </ListItem></Appear>
+						<Appear><ListItem> Command-line invocation </ListItem></Appear>
 						<Appear><ListItem> Supports Node.js </ListItem></Appear>
 					</List>
 				</Slide>
@@ -204,15 +206,17 @@ export default class Presentation extends React.Component {
 					<Markdown >
 {`
 	functions
-	├── bar
-	│   ├── node_modules
-	│   ├── claudia.json
-	│   └── lambda.js
-	│   └── package.json
-	│
-	└── foo
-		├── claudia.json
-		└── lambda.js
+		├── bar
+		│	├── node_modules
+		│	├── claudia.json
+		│	├── lambda.js
+		│	└── package.json
+		│
+		└── foo
+			├── node_modules
+			├── claudia.json
+			├── lambda.js
+			└── package.json
 `}
 					</Markdown>
 				</Slide>
@@ -220,10 +224,10 @@ export default class Presentation extends React.Component {
 					<Text margin="0px auto 20px" bold textColor="white">Claudia</Text>
 					<List>
 						<Appear><ListItem> Deployment utility tool, less impact on project structure </ListItem></Appear>
-						<Appear><ListItem> node_modules per function</ListItem></Appear>
-						<Appear><ListItem> Generates a role for each function when deployed </ListItem></Appear>
-						<Appear><ListItem> Heavily depends on command-line config </ListItem></Appear>
-						<Appear><ListItem> No CloudWatch logs in console </ListItem></Appear>
+						<Appear><ListItem> &#10060; node_modules per function</ListItem></Appear>
+						<Appear><ListItem> &#10060; Generates a role for each function when deployed </ListItem></Appear>
+						<Appear><ListItem> &#10060; Heavily depends on command-line config </ListItem></Appear>
+						<Appear><ListItem> &#10060; No CloudWatch logs in console </ListItem></Appear>
 					</List>
 				</Slide>
 
@@ -232,9 +236,9 @@ export default class Presentation extends React.Component {
 					<List>
 						<Appear><ListItem> Framework </ListItem></Appear>
 						<Appear><ListItem> Upload code to S3 bucket </ListItem></Appear>
-						<Appear><ListItem> Built-in support for multiple stges (environments). </ListItem></Appear>
+						<Appear><ListItem> &#10003; Built-in support for multiple stages (environments). </ListItem></Appear>
 						<Appear><ListItem> e.g. dev, production </ListItem></Appear>
-						<Appear><ListItem> Extensible via Plugins </ListItem></Appear>
+						<Appear><ListItem> &#10003; Extensible via plugins </ListItem></Appear>
 						<Appear><ListItem> Supports Node.js, Python, Java & Scala </ListItem></Appear>
 						<Appear><ListItem> Largest community adoption </ListItem></Appear>
 					</List>
@@ -248,7 +252,7 @@ export default class Presentation extends React.Component {
 		├── bar.js
 		├── foo.js
 		├── package.json
-		├── serverless.yml
+		└── serverless.yml
 `}
 					</Markdown>
 				</Slide>
@@ -256,27 +260,27 @@ export default class Presentation extends React.Component {
 				<Slide transition={["slide"]} bgColor="primary" textColor="white">
 					<Text margin="0px auto 20px" bold textColor="white">Serverless</Text>
 					<List>
-						<Appear><ListItem> Can have multiple functions in the same folder </ListItem></Appear>
-						<Appear><ListItem> YAML config file for all </ListItem></Appear>
-						<Appear><ListItem> Functions share node_modules </ListItem></Appear>
-						<Appear><ListItem> More flags in console commands </ListItem></Appear>
-						<Appear><ListItem> Has CloudWatch log in console </ListItem></Appear>
+						<Appear><ListItem> &#10003; Can have multiple functions in the same folder </ListItem></Appear>
+						<Appear><ListItem> &#10003; YAML config file for all </ListItem></Appear>
+						<Appear><ListItem> &#10003; Functions share node_modules </ListItem></Appear>
+						<Appear><ListItem> &#10003; More flags in console commands </ListItem></Appear>
+						<Appear><ListItem> &#10003; Has CloudWatch log in console </ListItem></Appear>
 
 					</List>
 					</Slide>
 
 					<Slide transition={["slide"]} bgColor="primary" textColor="white">
-					<Text margin="0px auto 20px" bold textColor="white">Lambda Frameworks</Text>
+					<Text margin="0px auto 20px" bold textColor="white">&lambda; framework summary</Text>
 					<Markdown>
 {`
-Feature                       | Apex        | Serverless | Cloudia
+Feature                       | Apex        | Serverless | Claudia
 -------                       | ----------- | ---------- | ---------:
-Size                          | lightweight | heavy      | lightweight
+Size                          | mid-weight  | heavy      | lightweight
 Supports Node.js              | &#10003;    | &#10003;   | &#10003;
 Other languages               | Go, Java    | Python, Java | -
 Plugin libraries              | &#10003;    | &#10003;   | &#10003;
 Couldwatch log suport         | &#10060;    | &#10003;   | &#10060;
-Vpc setting in config file    | &#10003;    | &#10003;   | &#10060;
+VPC setting in config file    | &#10003;    | &#10003;   | &#10060;
 Functions share node modules  | &#10060;    | &#10003;   | &#10060;
 Dynamic Reference config file | &#10060;    | &#10003;   | &#10060;
 automates configuration tasks | &#10060;    | &#10060;   | &#10003;
